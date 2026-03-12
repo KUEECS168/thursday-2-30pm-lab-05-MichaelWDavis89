@@ -22,7 +22,7 @@ for planets in planetsVisited:
     if (n+1) < len(planetsVisited):
         afterPlanet = planetsVisited[n+1]
     n += 1
-    if neighboringPlanets in planetsVisited:
+    if planets == neighboringPlanets:
         print(f'Planets neighboring {neighboringPlanets}:')
         if (n-1) <= 0:
             print('\t',afterPlanet)
