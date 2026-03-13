@@ -28,7 +28,7 @@ for planets in planetsVisited:
             print('\t',beforePlanet)
         elif ((n-1) >= 0) and ((n+1) < len(planetsVisited)):
             print(f'\t{beforePlanet}\n\t{afterPlanet}')
-        n += 1
+    n += 1
  print('Program ending...')
     
     
