@@ -14,23 +14,21 @@ while missionOver != 'y':
     planetsVisited.append(planetAt)
 
 neighboringPlanets = str(input('Which planet do you want the neighbors for?: '))
-
+n = 0
 for planets in planetsVisited:
-    n = 0
-    if (n-1) > 0:
+    if (n-1) >= 0:
         beforePlanet = planetsVisited[n-1]
     if (n+1) < len(planetsVisited):
         afterPlanet = planetsVisited[n+1]
-    n += 1
     if planets == neighboringPlanets:
         print(f'Planets neighboring {neighboringPlanets}:')
-        if (n-1) <= 0:
+        if (n-1) < 0:
             print('\t',afterPlanet)
-        elif (n+1) > len(planetsVisited):
+        elif (n+1) >= len(planetsVisited):
             print('\t',beforePlanet)
-        elif ((n-1) > 0) and ((n+1) < len(planetsVisited)):
+        elif ((n-1) >= 0) and ((n+1) < len(planetsVisited)):
             print(f'\t{beforePlanet}\n\t{afterPlanet}')
-        
-print('Program ending...')
+        n += 1
+ print('Program ending...')
     
     
